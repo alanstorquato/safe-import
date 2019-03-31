@@ -45,4 +45,5 @@ class Post extends Model
       ->toArray();
 
    }
+
 }

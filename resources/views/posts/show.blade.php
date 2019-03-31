@@ -1,61 +1,66 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="col-md-8">
-    <h1>{{ $post->title }}</h1>
-    
-    <p>{{ $post->body }}</p>
+    <div class="col-md-8">
+        <h1>{{ $post->title }}</h1>
 
-{{--    <hr>--}}
+        <hr>
 
-{{--    <div class="comments">--}}
+        <p>{{ $post->body }}</p>
 
-{{--        <ul class="list-group">--}}
+        <p><a href="/">Voltar</a></p>
 
-{{--            @foreach ($post->comments as $comment)--}}
 
-{{--                <li class="list-group-item">--}}
-{{--                    <strong>--}}
-{{--                        {{$comment->created_at->diffForHumans() }}: &nbsp;--}}
-{{--                    </strong>--}}
+        {{--    <hr>--}}
 
-{{--                    {{ $comment->body }}--}}
+        {{--    <div class="comments">--}}
 
-{{--                </li>--}}
+        {{--        <ul class="list-group">--}}
 
-{{--            @endforeach--}}
-{{--            --}}
-{{--        </ul>--}}
-{{--    --}}
-{{--    </div>--}}
+        {{--            @foreach ($post->comments as $comment)--}}
 
-{{--    <hr>--}}
+        {{--                <li class="list-group-item">--}}
+        {{--                    <strong>--}}
+        {{--                        {{$comment->created_at->diffForHumans() }}: &nbsp;--}}
+        {{--                    </strong>--}}
 
-{{--    <div class="card">--}}
-{{--        --}}
-{{--        <div class="card-body">--}}
+        {{--                    {{ $comment->body }}--}}
 
-{{--            <form method="POST" action="/posts/{{$post->id}}/comments/">--}}
-{{--                {{ csrf_field() }}--}}
-{{--                <div class="form-group">--}}
+        {{--                </li>--}}
 
-{{--                <textarea name="body" id="" placeholder="Your comment here" class="form-control"></textarea>--}}
-{{--                --}}
-{{--                </div>--}}
+        {{--            @endforeach--}}
+        {{--            --}}
+        {{--        </ul>--}}
+        {{--    --}}
+        {{--    </div>--}}
 
-{{--                <div class="form-group">--}}
-{{--                    --}}
-{{--                    <button type="submit" class="btn btn-primary">Add Comment</button>--}}
-{{--                        --}}
-{{--                </div>--}}
+        {{--    <hr>--}}
 
-{{--            </form>--}}
+        {{--    <div class="card">--}}
+        {{--        --}}
+        {{--        <div class="card-body">--}}
 
-{{--            @include('layouts.errors')--}}
+        {{--            <form method="POST" action="/posts/{{$post->id}}/comments/">--}}
+        {{--                {{ csrf_field() }}--}}
+        {{--                <div class="form-group">--}}
 
-{{--        </div>--}}
+        {{--                <textarea name="body" id="" placeholder="Your comment here" class="form-control"></textarea>--}}
+        {{--                --}}
+        {{--                </div>--}}
 
-{{--    </div>--}}
-</div>
+        {{--                <div class="form-group">--}}
+        {{--                    --}}
+        {{--                    <button type="submit" class="btn btn-primary">Add Comment</button>--}}
+        {{--                        --}}
+        {{--                </div>--}}
+
+        {{--            </form>--}}
+
+        {{--            @include('layouts.errors')--}}
+
+        {{--        </div>--}}
+
+        {{--    </div>--}}
+    </div>
 
 @endsection

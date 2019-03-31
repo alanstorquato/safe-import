@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Blog Template · Bootstrap</title>
+    <title>Safe Import</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
 
@@ -25,13 +25,6 @@
 
     @include('layouts.nav')
 
-{{--    @if($flash = session('message'))--}}
-
-{{--    <div id="flash-message" class="alert alert-success" role="alert">--}}
-{{--        {{ $flash }}--}}
-{{--    </div>--}}
-
-{{--    @endif--}}
 
     <div class="container">
       <div class="row">

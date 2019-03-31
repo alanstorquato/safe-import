@@ -15,8 +15,20 @@
         <div class="row">
             <div class="col-md-8 blog-main">
                 <h3 class="pb-4 mb-4 font-italic border-bottom">
-                    From the Firehose
+                    @if (Auth::check())
+                        <form method="get" action="/posts/create">
+
+                            <div class="form-group">
+
+                                <button type="submit" class="btn btn-primary">Novo Post</button>
+
+                            </div>
+
+                        </form>
+
+                    @endif
                 </h3>
+
 
                 @foreach ($posts as $post)
 

@@ -8,7 +8,13 @@ Route::post('/posts','PostsController@store');
 
 Route::get('/posts/{post}','PostsController@show');
 
-//Route::post('posts/{post}/comments', 'CommentsController@store');
+Route::delete('/posts/{id}','PostsController@destroy');
+
+Route::get('/posts/edit/{id}','PostsController@edit');
+
+Route::patch('/posts/edit/{id}','PostsController@update');
+
+Route::post('posts/{post}/comments', 'CommentsController@store');
 
 
 Route::get('/register','RegistrationController@create');
