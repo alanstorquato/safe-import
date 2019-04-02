@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Post;
+use function foo\func;
 use Illuminate\Support\ServiceProvider;
 use \App\Billing\Stripe;
 
@@ -16,11 +18,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $this->app->singleton(Stripe::class, function(){
-
-            return new Stripe(config('services.stripe.secret'));
-
-        });
 
     }
 
@@ -31,11 +28,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        dd(Post::archives());
         //
         view()->composer('layouts.sidebar', function($view){
-
             $view->with('archives', \App\Post::archives());
-
         });
+
+
+        \Carbon\Carbon::setLocale('pt-BR');
     }
 }
