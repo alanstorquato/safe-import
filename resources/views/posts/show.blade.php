@@ -8,7 +8,7 @@
 
         <hr>
 
-        <p>{{ $post->body }}</p>
+        <p>{!! $post->body !!} </p>
 
         <p><a href="/">Voltar</a></p>
 

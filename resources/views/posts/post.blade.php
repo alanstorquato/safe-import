@@ -82,8 +82,8 @@
                     <div class="card-body">
 
                         <h5 class="card-title blog-post-title">{{ $post->title }}</h5>
-
-                        <p class="card-text">{{ substr($post->body, 0, 255) }}
+{{--                        <p class="card-text">{{ substr(strip_tags($post->body), 0, 255) }}--}}
+                        <p class="card-text">{{ $post->body }}
 
                             <br>
 

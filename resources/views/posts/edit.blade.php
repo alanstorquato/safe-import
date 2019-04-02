@@ -47,7 +47,15 @@
             @include('layouts.errors')
 
             <p><a href="/">Voltar</a></p>
+
         </form>
+
     </div>
 
+@endsection
+
+@section('js')
+    <script>
+        CKEDITOR.replace('body');
+    </script>
 @endsection
