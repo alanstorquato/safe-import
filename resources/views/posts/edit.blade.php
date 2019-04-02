@@ -32,6 +32,14 @@
 
             <div class="form-group">
 
+                <label for="image">Imagem: </label>
+
+                <input type="file" id="image" name="image">
+
+            </div>
+
+            <div class="form-group">
+
                 <button type="submit" class="btn btn-warning">Editar</button>
 
             </div>
