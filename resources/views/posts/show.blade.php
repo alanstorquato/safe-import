@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
+
     <div class="col-md-8">
+
         <h1>{{ $post->title }}</h1>
 
         <hr>

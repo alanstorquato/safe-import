@@ -4,7 +4,7 @@
   
     <div class="col-md-8">
 
-        <h1>Sign In</h1>
+        <h1>Conectar</h1>
 
         <hr>
 
@@ -14,26 +14,30 @@
 
             <div class="form-group">
 
-              <label for="email"> Email Address:</label>
+              <label for="email"> E-mail:</label>
+
               <input type="email" name="email" id="email" class="form-control">
               
             </div>
 
             <div class="form-group">
 
-              <label for="password">Password:</label>
+              <label for="password">Senha:</label>
+
               <input type="password" name="password" id="password" class="form-control">
               
             </div>
             
             <div class="form-group">
               
-              <button type="submit" class="btn btn-primary">Sign In</button>
+              <button type="submit" class="btn btn-primary">Conectar</button>
 
             </div>
 
             @include('layouts.errors')
+
         </form>
+
     </div>
 
 @endsection
