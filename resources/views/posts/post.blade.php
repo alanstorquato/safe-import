@@ -1,150 +1,150 @@
 <div class="blog-post">
 
-    <h2 class="blog-post-title">
+{{--    <h2 class="blog-post-title">--}}
 
-        {{ $post->title }}
+{{--        {{ $post->title }}--}}
 
-    </h2>
+{{--    </h2>--}}
 
-    <p class="blog-post-meta">
+{{--    <p class="blog-post-meta">--}}
 
-        {{ $post->created_at->toFormattedDateString() }}
+{{--        {{ $post->created_at->toFormattedDateString() }}--}}
 
-    </p>
+{{--    </p>--}}
 
-    <p>
+{{--    <p>--}}
 
-        {{ substr($post->body, 0, 255) }}
+{{--        {{ substr($post->body, 0, 255) }}--}}
 
-        <br>
+{{--        <br>--}}
 
-        <a href="/posts/{{ $post->id}}" class="">Continue lendo...</a>
+{{--        <a href="/posts/{{ $post->id}}" class="">Continue lendo...</a>--}}
 
-    </p>
+{{--    </p>--}}
 
-    @if (Auth::check())
+{{--    @if (Auth::check())--}}
 
-        <div class="row">
+{{--        <div class="row">--}}
 
-            <div class="col-md-2">
+{{--            <div class="col-md-2">--}}
 
-                <form method="get" action="/posts/edit/{{$post->id}}">
+{{--                <form method="get" action="/posts/edit/{{$post->id}}">--}}
 
-                    {{ csrf_field() }}
+{{--                    {{ csrf_field() }}--}}
 
-                    <div class="form-group">
+{{--                    <div class="form-group">--}}
 
-                        <button type="submit" class="btn btn-warning">EDITAR</button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-            <div class="col-md-2">
-
-                <form method="post" action="/posts/{{$post->id}}">
-
-                    {{ csrf_field() }}
-
-                    @method('DELETE')
-
-                    <div class="form-group">
-
-                        <button type="submit" class="btn btn-danger">DELETAR</button>
-
-                    </div>
-
-                </form>
-
-
-            </div>
-
-        </div>
-
-    @endif
-
-    <hr>
-
-{{--        <div class="card mb-3">--}}
-
-{{--            <div class="row no-gutters">--}}
-
-{{--                <div class="col-md-4">--}}
-
-{{--                    <img src="{{$post->image}}" class="card-img" alt="...">--}}
-
-{{--                </div>--}}
-
-{{--                <div class="col-md-8">--}}
-
-{{--                    <div class="card-body">--}}
-
-{{--                        <h5 class="card-title blog-post-title">{{ $post->title }}</h5>--}}
-
-{{--                        <p class="card-text">{{ substr($post->body, 0, 255) }}--}}
-
-{{--                            <br>--}}
-
-{{--                            <a href="/posts/{{ $post->id}}" class="">Continue lendo...</a></p>--}}
-
-{{--                        <p class="card-text">--}}
-
-{{--                            <small class="text-muted">{{ $post->created_at->toFormattedDateString() }}o</small>--}}
-
-{{--                        </p>--}}
+{{--                        <button type="submit" class="btn btn-warning">EDITAR</button>--}}
 
 {{--                    </div>--}}
 
-{{--                </div>--}}
+{{--                </form>--}}
+
+{{--            </div>--}}
+
+{{--            <div class="col-md-2">--}}
+
+{{--                <form method="post" action="/posts/{{$post->id}}">--}}
+
+{{--                    {{ csrf_field() }}--}}
+
+{{--                    @method('DELETE')--}}
+
+{{--                    <div class="form-group">--}}
+
+{{--                        <button type="submit" class="btn btn-danger">DELETAR</button>--}}
+
+{{--                    </div>--}}
+
+{{--                </form>--}}
+
 
 {{--            </div>--}}
 
 {{--        </div>--}}
 
+{{--    @endif--}}
 
-{{--        @if (Auth::check())--}}
+{{--    <hr>--}}
 
-{{--            <div class="row">--}}
+        <div class="card mb-3">
 
-{{--                <div class="col-md-2">--}}
+            <div class="row no-gutters">
 
-{{--                    <form method="get" action="/posts/edit/{{$post->id}}">--}}
+                <div class="col-md-4">
 
-{{--                        {{ csrf_field() }}--}}
+                    <img src="{{$post->image}}" class="card-img" alt="...">
 
-{{--                        <div class="form-group">--}}
+                </div>
 
-{{--                            <button type="submit" class="btn btn-warning">EDITAR</button>--}}
+                <div class="col-md-8">
 
-{{--                        </div>--}}
+                    <div class="card-body">
 
-{{--                    </form>--}}
+                        <h5 class="card-title blog-post-title">{{ $post->title }}</h5>
 
-{{--                </div>--}}
+                        <p class="card-text">{{ substr($post->body, 0, 255) }}
 
-{{--                <div class="col-md-2">--}}
+                            <br>
 
-{{--                    <form method="post" action="/posts/{{$post->id}}">--}}
+                            <a href="/posts/{{ $post->id}}" class="">Continue lendo...</a></p>
 
-{{--                        {{ csrf_field() }}--}}
+                        <p class="card-text">
 
-{{--                        @method('DELETE')--}}
+                            <small class="text-muted">{{ $post->created_at->toFormattedDateString() }}o</small>
 
-{{--                        <div class="form-group">--}}
+                        </p>
 
-{{--                            <button type="submit" class="btn btn-danger">DELETAR</button>--}}
+                    </div>
 
-{{--                        </div>--}}
+                </div>
 
-{{--                    </form>--}}
+            </div>
 
-{{--                </div>--}}
-{{--            </div>--}}
+        </div>
 
-{{--        @endif--}}
 
-{{--        <hr>--}}
+        @if (Auth::check())
+
+            <div class="row">
+
+                <div class="col-md-2">
+
+                    <form method="get" action="/posts/edit/{{$post->id}}">
+
+                        {{ csrf_field() }}
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-warning">EDITAR</button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="col-md-2">
+
+                    <form method="post" action="/posts/{{$post->id}}">
+
+                        {{ csrf_field() }}
+
+                        @method('DELETE')
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-danger">DELETAR</button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        @endif
+
+        <hr>
 
 </div>
