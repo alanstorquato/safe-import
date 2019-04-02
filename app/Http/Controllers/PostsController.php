@@ -46,6 +46,7 @@ class PostsController extends Controller
         $this->validate(request(), [
             'title' => 'required',
             'body' => 'required',
+            'subtitle' => 'required',
             'image' => 'required'
         ]);
 
@@ -78,6 +79,7 @@ class PostsController extends Controller
 
         $post = new Post();
         $post->title = $request->get('title');
+        $post->subtitle = $request->get('subtitle');
         $post->body = $request->get('body');
         $post->user_id = auth()->id();
         $post->image = $image;
@@ -131,12 +133,14 @@ class PostsController extends Controller
         if(!empty($image)){
             $post = Post::find($id);
             $post->title = $request->get('title');
+            $post->subtitle = $request->get('subtitle');
             $post->body = $request->get('body');
             $post->image = $image;
             $post->save();
         }else{
             $post = Post::find($id);
             $post->title = $request->get('title');
+            $post->subtitle = $request->get('subtitle');
             $post->body = $request->get('body');
             $post->save();
 

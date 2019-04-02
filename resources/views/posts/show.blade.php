@@ -6,9 +6,11 @@
 
         <h1>{{ $post->title }}</h1>
 
-        <hr>
+        <br>
 
         <p>{!! $post->body !!} </p>
+
+        <br>
 
         <p><a href="/">Voltar</a></p>
 

@@ -24,6 +24,14 @@
 
             <div class="form-group">
 
+                <label for="subtitle">Subtitulo: </label>
+
+                <input type="text" class="form-control" id="subtitle" name="subtitle" value="{{ $post->subtitle }}">
+
+            </div>
+
+            <div class="form-group">
+
                 <label for="body">Texto: </label>
 
                 <textarea rows="10" cols="200" name="body" id="body" class="form-control">{{$post->body }}</textarea>
