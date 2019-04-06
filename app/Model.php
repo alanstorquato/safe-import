@@ -10,6 +10,7 @@ class Model extends Eloquent
 
     protected $dates = [
         'created_at',
-        'updated_at '
+        'created_at ',
+        'expires_at'
     ];
 }
