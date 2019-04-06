@@ -20,12 +20,11 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::latest()
-            ->filter(request(['month', 'year']))
-            ->get();
+            ->filter(request(['month', 'year']))->paginate(5);
 
-        $archives = Post::archives();
 
-        return view('posts.index', compact('posts','archives'));
+
+        return view('posts.index', compact('posts'));
     }
 
     public function show(Post $post)
@@ -53,19 +52,14 @@ class PostsController extends Controller
         $nameFile = null;
         // Verifica se informou o arquivo e se é válido
         if (request()->hasFile('image') && request()->file('image')->isValid()) {
-
             // Define um aleatório para o arquivo baseado no timestamps atual
             $name = uniqid(date('HisYmd'));
-
             // Recupera a extensão do arquivo
             $extension = request()->image->extension();
-
             // Define finalmente o nome
             $nameFile = "{$name}.{$extension}";
-
             // Faz o upload:
             $upload = request()->image->storeAs('img-posts', $nameFile);
-
             $image = 'storage/img-posts/'.$nameFile;
             // Se tiver funcionado o arquivo foi armazenado em storage/app/public/categories/nomedinamicoarquivo.extensao
             // Verifica se NÃO deu certo o upload (Redireciona de volta)
@@ -74,7 +68,6 @@ class PostsController extends Controller
                     ->back()
                     ->with('error', 'Falha ao fazer upload')
                     ->withInput();
-
         }
 
         $post = new Post();
