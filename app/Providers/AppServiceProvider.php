@@ -3,13 +3,11 @@
 namespace App\Providers;
 
 use App\Post;
-use function foo\func;
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
-use \App\Billing\Stripe;
 
 class AppServiceProvider extends ServiceProvider
 {
-    protected $defer = true;
     /**
      * Register any application services.
      *
@@ -18,7 +16,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
-
     }
 
     /**
@@ -28,13 +25,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        dd(Post::archives());
         //
+        \Carbon\Carbon::setLocale(config('app.locale'));
+
         view()->composer('layouts.sidebar', function($view){
             $view->with('archives', \App\Post::archives());
         });
 
 
-        \Carbon\Carbon::setLocale('pt-BR');
     }
 }
