@@ -28,18 +28,3 @@ Route::post('/admin','SessionsController@store');
 
 Route::get('/logout','SessionsController@destroy');
 
-
-// GET /posts 
-
-// GET /posts/create
-
-// POST /posts
-
-// GET /posts/{id}/edit 
-
-// GET /posts/{id}
-
-// PATCH /posts/{id}
-
-// DELETE /posts/{id}
-
