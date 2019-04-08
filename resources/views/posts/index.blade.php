@@ -1,54 +1,32 @@
 @extends('layouts.master')
 
+
 @section('content')
 
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+  <div class="col s12 m12">
 
-        <div class="col-md-6 px-0">
+    @if (Auth::check())
 
-            <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+    <!-- <div class="row"> -->
+    <form method="get" action="/posts/create">
 
-            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
-                efficiently about what’s most interesting in this post’s contents.</p>
-            <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-
-        </div>
-
+    <div class="fixed-action-btn">
+      <button class="btn-floating btn-large green">
+        <i class="large material-icons">add</i>
+      </button>
     </div>
+    </form>
+    <!-- </div> -->
 
-    <main role="main" class="container">
+    @endif
 
-        <div class="row">
+    @foreach ($posts as $post)
 
-            <div class="col-md-8 blog-main">
+    @include('posts.post')
 
-                <h3 class="pb-4 mb-4 font-italic border-bottom">
+    @endforeach
 
-                    @if (Auth::check())
+  </div>
 
-                        <form method="get" action="/posts/create">
-
-                            <div class="form-group">
-
-                                <button type="submit" class="btn btn-primary">Novo Post</button>
-
-                            </div>
-
-                        </form>
-
-                    @endif
-
-                </h3>
-
-
-                @foreach ($posts as $post)
-
-                    @include('posts.post')
-
-                @endforeach
-
-                {!! $posts->links() !!}
-
-            </div>
 
 @endsection

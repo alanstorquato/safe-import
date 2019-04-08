@@ -1,26 +1,20 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Safe Import</title>
+    <title>Safe Import | Blog</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-
-    <!-- Custom styles for this template -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+
     <link href="/css/blog.css" rel="stylesheet">
 
 
@@ -30,23 +24,30 @@
 
 @include('layouts.nav')
 
+@include('layouts.parallax')
 
-<div class="container">
-    <div class="row">
-        @yield('content')
+<main>
+  <div class="row">
 
-        @include('layouts.sidebar')
-    </div>
+    @yield('content')
 
-</div>
+    @include('layouts.sidebar')
+
+  </div>
+</main>
 
 @include('layouts.footer')
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script src="{{ asset('js/blog.js') }}"></script>
 
-@yield('js');
+
+@yield('js')
 
 </body>
 </html>
