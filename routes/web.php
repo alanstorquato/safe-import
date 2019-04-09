@@ -14,7 +14,10 @@ Route::get('/posts/edit/{id}','PostsController@edit');
 
 Route::patch('/posts/edit/{id}','PostsController@update');
 
+Route::post('/posts/search', 'PostsController@search');
+
 Route::post('posts/{post}/comments', 'CommentsController@store');
+
 
 
 Route::get('/register','RegistrationController@create');

@@ -40,7 +40,6 @@
 
                 </h3>
 
-
                 @foreach ($posts as $post)
 
                     @include('posts.post')

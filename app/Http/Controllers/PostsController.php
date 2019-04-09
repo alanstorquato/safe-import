@@ -13,7 +13,7 @@ class PostsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('auth')->except(['index', 'show','search']);
 
     }
 
@@ -22,10 +22,17 @@ class PostsController extends Controller
         $posts = Post::latest()
             ->filter(request(['month', 'year']))->paginate(5);
 
+        return view('posts.index', compact('posts'));
+    }
 
+
+    public function search(Request $request)
+    {
+        $posts = Post::search($request->criterio);
 
         return view('posts.index', compact('posts'));
     }
+
 
     public function show(Post $post)
     {
@@ -49,26 +56,7 @@ class PostsController extends Controller
             'image' => 'required'
         ]);
 
-        $nameFile = null;
-        // Verifica se informou o arquivo e se é válido
-        if (request()->hasFile('image') && request()->file('image')->isValid()) {
-            // Define um aleatório para o arquivo baseado no timestamps atual
-            $name = uniqid(date('HisYmd'));
-            // Recupera a extensão do arquivo
-            $extension = request()->image->extension();
-            // Define finalmente o nome
-            $nameFile = "{$name}.{$extension}";
-            // Faz o upload:
-            $upload = request()->image->storeAs('img-posts', $nameFile);
-            $image = 'storage/img-posts/'.$nameFile;
-            // Se tiver funcionado o arquivo foi armazenado em storage/app/public/categories/nomedinamicoarquivo.extensao
-            // Verifica se NÃO deu certo o upload (Redireciona de volta)
-            if ( !$upload )
-                return redirect()
-                    ->back()
-                    ->with('error', 'Falha ao fazer upload')
-                    ->withInput();
-        }
+        $image = Post::images();
 
         $post = new Post();
         $post->title = $request->get('title');
@@ -96,41 +84,16 @@ class PostsController extends Controller
             'body' => 'required'
         ]);
 
-        $nameFile = null;
-        // Verifica se informou o arquivo e se é válido
-        if (request()->hasFile('image') && request()->file('image')->isValid()) {
+        $image = Post::images();
 
-            // Define um aleatório para o arquivo baseado no timestamps atual
-            $name = uniqid(date('HisYmd'));
-
-            // Recupera a extensão do arquivo
-            $extension = request()->image->extension();
-
-            // Define finalmente o nome
-            $nameFile = "{$name}.{$extension}";
-
-            // Faz o upload:
-            $upload = request()->image->storeAs('img-posts', $nameFile);
-
-            $image = 'storage/img-posts/'.$nameFile;
-            // Se tiver funcionado o arquivo foi armazenado em storage/app/public/categories/nomedinamicoarquivo.extensao
-            // Verifica se NÃO deu certo o upload (Redireciona de volta)
-            if ( !$upload )
-                return redirect()
-                    ->back()
-                    ->with('error', 'Falha ao fazer upload')
-                    ->withInput();
-
-        }
-
-        if(!empty($image)){
+        if (!empty($image)) {
             $post = Post::find($id);
             $post->title = $request->get('title');
             $post->subtitle = $request->get('subtitle');
             $post->body = $request->get('body');
             $post->image = $image;
             $post->save();
-        }else{
+        } else {
             $post = Post::find($id);
             $post->title = $request->get('title');
             $post->subtitle = $request->get('subtitle');
@@ -147,7 +110,8 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->delete();
-        return redirect('/')->with('alert-success','O Post foi deletado');
+        return redirect('/')->with('alert-success', 'O Post foi deletado');
     }
+
 
 }
