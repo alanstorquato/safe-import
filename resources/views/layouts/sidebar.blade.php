@@ -1,32 +1,27 @@
-<aside class="col-md-4 blog-sidebar">
-    <div class="p-4 mb-3 bg-light rounded">
-        <h4 class="font-italic">Sobre</h4>
-        <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet
-            fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-    </div>
+    <!-- <aside class="col s12 m3 ">
 
-    <div class="p-4">
-        <h4 class="font-italic">Arquivos</h4>
-        <ol class="list-unstyled mb-0">
+      <ul class="collection with-header">
+        <li class="collection-header center"><h4>Arquivos</h4></li>
 
-            @if(!empty($archives))
-                @foreach ($archives as $stats)
-                    <li><a href="/?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
-                            {{ $stats['month'] . ' ' . $stats['year']  }}
-                        </a>
-                    </li>
-                @endforeach
-            @endif
+        @if(!empty($archives))
+          @foreach ($archives as $stats)
+          <li class="collection-item">
+              <a href="/?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
+                {{ $stats['month'] . ' ' . $stats['year']  }}
+              </a>
+          </li>
+          @endforeach
+        @endif
+      </ul>
 
-        </ol>
-    </div>
+        <ul class="collection with-header">
+          <li class="collection-header center"><h4>Fale conosco</h4></li>
+          <li class="collection-item center">
+            <a href="#" class="rede-social rede-social-facebook"><i class="fab fa-facebook fa-2x icone-rede-social"></i> Facebook</a>
+          </li>
+          <li class="collection-item center">
+            <a href="#" class="rede-social rede-social-instagram"><i class="fab fa-instagram fa-2x icone-rede-social"></i> Instagram</a>
+          </li>
+        </ul>
 
-    <div class="p-4">
-        <h4 class="font-italic">Redes</h4>
-        <ol class="list-unstyled">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ol>
-    </div>
-</aside>
-<!-- /.blog-sidebar -->
+    </aside> -->
