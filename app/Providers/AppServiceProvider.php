@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Post;
-use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,10 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        \Carbon\Carbon::setLocale(config('app.locale'));
-
-        view()->composer('layouts.sidebar', function($view){
+        view()->composer('layouts.footer', function($view){
             $view->with('archives', \App\Post::archives());
         });
 
