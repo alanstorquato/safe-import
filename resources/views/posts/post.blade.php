@@ -1,42 +1,81 @@
+<div class="col s12 m12 l12">
+    <!-- 
+    <div class="card-panel blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+            <a href="#">This is a link</a>
+            <a href="#">This is a link</a>
+        </div>
+    </div> -->
 
-<div class="col s12 m3">
-  <div class="card z-depth-2">
-    <div class="card-image">
-      <!-- <img src="{{ $post->image }}"> -->
-      <img class="responsive-img" src="https://www.sciencenews.org/sites/default/files/2018/09/main/articles/091118_AC_placebo_feat.jpg">
+    <!-- <div class="col s12 m7"> -->
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="https://www.sciencenews.org/sites/default/files/2018/09/main/articles/091118_AC_placebo_feat.jpg">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <span class="card-title truncate">
+                    {{ $post->title }}
+                </span>
 
+                <p>{{ $post->subtitle }}</p>
+                <small class="right">{{ $post->created_at->toFormattedDateString() }}</small>
+
+            </div>
+            <div class="card-action center">
+                <a href="/posts/{{ $post->id }}" style="color: #0C0969;">Leia mais</a>
+            </div>
+        </div>
     </div>
-    <div class="card-content">
-      <span class="card-title truncate">{{ $post->title }}</span>
-      <p class="truncate">{{ $post->subtitle }}</p>
-      <small class="right">{{ $post->created_at->toFormattedDateString() }}</small>
-    </div>
-    <div class="card-action center">
-      <a href="/posts/{{ $post->id }}" style="color: #0C0969;">Leia mais</a>
-    </div>
-    <div class="divider"></div>
-  </div>
-  <div class="row" style="padding: 5px;">
     @if (Auth::check())
-    <div class="col s6 m12 l6">
-      <form method="get" action="/posts/edit/{{$post->id}}"style="padding-bottom: 5px;">
-        {{ csrf_field() }}
-        <button type="submit" class="btn blue">EDITAR</button>
-        <!-- <button class="btn-floating waves-effect waves-light blue right"><i class="material-icons">edit</i></button> -->
-      </form>
-    </div>
+    <div class="row">
+        <div class="col s6 m6 l3 center">
+            <form method="get" action="/posts/edit/{{$post->id}}" style="padding-bottom: 5px;">
+                {{ csrf_field() }}
+                <button type="submit" class="btn blue ">EDITAR</button>
+                <!-- <button class="btn-floating waves-effect waves-light blue right"><i class="material-icons">edit</i></button> -->
+            </form>
+        </div>
 
-    <div class="col s6 m12 l6">
-      <form method="post" action="/posts/{{$post->id}}">
-        {{ csrf_field() }}
+        <div class="col s6 m6 l3 center">
+            <form method="post" action="/posts/{{$post->id}}">
+                {{ csrf_field() }}
 
-        @method('DELETE')
-        <button type="submit" class="btn red">DELETAR</button>
-        <!-- <button class="btn-floating waves-effect waves-light red left"><i class="material-icons">delete</i></button> -->
+                @method('DELETE')
+                <button type="submit" class="btn red ">DELETAR</button>
+                <!-- <button class="btn-floating waves-effect waves-light red left"><i class="material-icons">delete</i></button> -->
 
-      </form>
+            </form>
+        </div>
+
     </div>
     @endif
+    <!-- </div> -->
 
-  </div>
- </div>
+    <!-- <div class="card z-depth-2">
+        <div class="card-image">
+            <img src="{{ $post->image }}">
+            <img class="responsive-img"
+                src="https://www.sciencenews.org/sites/default/files/2018/09/main/articles/091118_AC_placebo_feat.jpg">
+
+        </div>
+        <div class="card-content">
+            <span class="card-title truncate">{{ $post->title }}</span>
+            <p class="truncate">{{ $post->subtitle }}</p>
+            <small class="right">{{ $post->created_at->toFormattedDateString() }}</small>
+        </div>
+        <div class="card-action center">
+            <a href="/posts/{{ $post->id }}" style="color: #0C0969;">Leia mais</a>
+        </div>
+        <div class="divider"></div>
+    </div>
+    <div class="row" style="padding: 5px;">
+        
+
+    </div> -->
+</div>

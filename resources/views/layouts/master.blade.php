@@ -27,12 +27,14 @@
 @include('layouts.parallax')
 
 <main>
-  <div class="row">
+  <div class="container">
+    <div class="row">
 
-    @yield('content')
+      @yield('content')
 
-    @include('layouts.sidebar')
+      @include('layouts.sidebar')
 
+    </div>
   </div>
 </main>
 
