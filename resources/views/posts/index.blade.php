@@ -38,8 +38,10 @@
     <li class="waves-effect"><a href="#!">5</a></li>
     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 </ul>
-<!-- <div class="center">
-    {!! $posts->links() !!}
-</div> -->
+<div class="center">
+    {{ $posts->links('vendor.pagination.default') }}.
+
+
+</div>
 
 @endsection
