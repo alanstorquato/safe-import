@@ -77,8 +77,12 @@
                         </div>
                     </div>
                     <div class="card-action center">
-                        <button type="submit" class="btn-large blue">Entrar</button>
-                        @include('layouts.errors')
+                        <div class="row">
+                            <div class="container">
+                                <button type="submit" class="btn-large btn-custom blue">Entrar</button>
+                                @include('layouts.errors')
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
