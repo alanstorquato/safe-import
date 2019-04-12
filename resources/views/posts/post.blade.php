@@ -1,21 +1,7 @@
 <div class="col s12 m12 l12">
-    <!-- 
-    <div class="card-panel blue-grey darken-1">
-        <div class="card-content white-text">
-            <span class="card-title">Card Title</span>
-            <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
-        </div>
-    </div> -->
-
-    <!-- <div class="col s12 m7"> -->
     <div class="card horizontal">
         <div class="card-image">
-            <img src="https://www.sciencenews.org/sites/default/files/2018/09/main/articles/091118_AC_placebo_feat.jpg">
+            <img src="{{ $post->image }}" class="resposive-img">
         </div>
         <div class="card-stacked">
             <div class="card-content">
@@ -55,27 +41,4 @@
 
     </div>
     @endif
-    <!-- </div> -->
-
-    <!-- <div class="card z-depth-2">
-        <div class="card-image">
-            <img src="{{ $post->image }}">
-            <img class="responsive-img"
-                src="https://www.sciencenews.org/sites/default/files/2018/09/main/articles/091118_AC_placebo_feat.jpg">
-
-        </div>
-        <div class="card-content">
-            <span class="card-title truncate">{{ $post->title }}</span>
-            <p class="truncate">{{ $post->subtitle }}</p>
-            <small class="right">{{ $post->created_at->toFormattedDateString() }}</small>
-        </div>
-        <div class="card-action center">
-            <a href="/posts/{{ $post->id }}" style="color: #0C0969;">Leia mais</a>
-        </div>
-        <div class="divider"></div>
-    </div>
-    <div class="row" style="padding: 5px;">
-        
-
-    </div> -->
 </div>

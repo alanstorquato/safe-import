@@ -16,7 +16,7 @@
           <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
         </div>
         <div class="col s12 l4 m6">
-          <h5 class="white-text">Arquivos</h5>
+          <h5 class="white-text center">Arquivos</h5>
           <select onchange="location = this.value">
             <option value="" disabled selected>Escolha um opção</option>
             @if(!empty($archives))

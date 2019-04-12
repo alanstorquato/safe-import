@@ -6,8 +6,6 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
                 <ul class="right hide-on-med-and-down">
-                    <li>
-                    </li>
                     <li id="menu-home"><a>Home</a></li>
                     <li id="menu-sobre"><a>Sobre nós</a></li>
                     <li id="menu-como-funciona"><a>Como funciona</a></li>
