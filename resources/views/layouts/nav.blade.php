@@ -2,7 +2,7 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img class="imagem" src="images/safe.png" alt="Logotipo da Safe Import"></a>
+                <a href="#" class="brand-logo"><img class="imagem" src="{{ asset('images/safe.png')}}" alt="Logotipo da Safe Import"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
                 <ul class="right hide-on-med-and-down">

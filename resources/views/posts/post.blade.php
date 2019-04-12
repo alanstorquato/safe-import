@@ -5,7 +5,7 @@
         </div>
         <div class="card-stacked">
             <div class="card-content">
-                <span class="card-title truncate">
+                <span class="card-title">
                     {{ $post->title }}
                 </span>
 

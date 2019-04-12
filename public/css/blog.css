@@ -67,6 +67,11 @@ nav {
     width: 100%;
 }
 
+.texto-noticia p:first-letter {
+    font-size: 200%;
+    margin-left: 10px;
+}
+
 .sair {
     color: red;
 }

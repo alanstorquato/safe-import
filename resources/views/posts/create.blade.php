@@ -27,7 +27,7 @@
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo"><img class="imagem" src="images/safe.png"
+                    <a href="#" class="brand-logo"><img class="imagem" src="{{ asset('images/safe.png') }}"
                             alt="Logotipo da Safe Import"></a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
@@ -36,14 +36,14 @@
                         <li id="menu-sobre"><a>Sobre nós</a></li>
                         <li id="menu-como-funciona"><a>Como funciona</a></li>
                         <li id="menu-duvidas"><a>Dúvidas frequentes</a></li>
-                        <li><a>Notícias</a></li>
+                        <li><a href="/">Notícias</a></li>
                         <li id="menu-contato"><a>Contato</a></li>
                         @if (Auth::check())
                         <!-- <li><label>Usuário logado: {{ Auth::user()->name }}</label></li> -->
                         <li><a href="/logout" title="Sair"><i class="material-icons sair">exit_to_app</i></a></li>
                         @endif
                     </ul>
-                    <form action="/posts/search" method="POST">
+                    <!-- <form action="/posts/search" method="POST">
                         {{ csrf_field() }}
                         <div class="input-field right">
                             <input id="search" type="search" name="criterio">
@@ -51,7 +51,7 @@
                             <i class="material-icons">close</i>
                         </div>
 
-                    </form>
+                    </form> -->
                 </div>
             </nav>
 
@@ -70,10 +70,7 @@
                 <li id="menu-mobile-duvidas"><a>Dúvidas frequentes</a></li>
                 <li><a>Notícias</a></li>
                 <li id="menu-mobile-contato"><a>Contato</a></li>
-                <li>
-                    <!-- <a><i class="material-icons prefix">search</i><input type="text"/></a> -->
 
-                </li>
                 @if (Auth::check())
                 <li id="menu-mobile-sair">
                     <a href="/logout" title="Sair"><i class="material-icons sair">exit_to_app</i>Sair</a>
@@ -96,47 +93,19 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <input placeholder="Título" type="text" class="validate" id="title" name="title">
-                        <!-- <label for="title">Título</label> -->
                     </div>
                 </div>
-
-                <!-- 
-                <div class="form-group">
-
-                    <label for="title">Titulo: </label>
-
-                    <input type="text" class="form-control" id="title" name="title">
-
-                </div> -->
 
                 <div class="row">
                     <div class="input-field col s12">
                         <input placeholder="Subtítulo" type="text" class="validate" id="subtitle" name="subtitle">
-                        <!-- <label for="title">Título</label> -->
                     </div>
                 </div>
-
-                <!-- <div class="form-group">
-
-                    <label for="subtitle">Subtitulo: </label>
-
-                    <input type="text" class="form-control" id="subtitle" name="subtitle">
-
-                </div> -->
-
-                <!-- <div class="form-group">
-
-                    <label for="body">Texto: </label>
-
-                    <textarea textarea rows="10" cols="200" name="body" id="body" class="form-control"></textarea>
-
-                </div> -->
 
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea textarea rows="10" cols="200" name="body" id="body"
                             class="form-control">Digite seu texto aqui...</textarea>
-                        <!-- <label for="title">Título</label> -->
                     </div>
                 </div>
 
@@ -150,16 +119,12 @@
                     </div>
                 </div>
 
-                <!-- <div class="form-group">
-
-                    <label for="image">Imagem: </label>
-
-                    <input type="file" id="image" name="image">
-
-                </div> -->
                 <br><br><br><br>
                 <div class="row center">
-                    <button class="waves-effect waves-light btn-large indigo btn-custom" >Publicar</button>
+                    <button class="waves-effect waves-light btn-large indigo btn-custom">Publicar</button>
+                </div>
+                <div class="row center">
+                    <a href="/" class="waves-effect waves-light btn-large green btn-custom">Voltar</a>
                 </div>
 
                 @include('layouts.errors')
@@ -187,9 +152,6 @@
                                 class="material-icons">local_phone</i></a>
                     </div>
 
-
-                    <!-- <h5 class="white-text">Footer Content</h5> -->
-                    <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
                 </div>
                 <div class="col s12 l4 m6">
                     <h5 class="white-text center">Arquivos</h5>
