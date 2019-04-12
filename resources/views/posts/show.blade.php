@@ -42,7 +42,7 @@
                         <li><a href="/logout" title="Sair"><i class="material-icons sair">exit_to_app</i></a></li>
                         @endif
                     </ul>
-                    <!-- <form action="/posts/search" method="POST">
+                    <form action="/posts/search" method="POST">
                         {{ csrf_field() }}
                         <div class="input-field right">
                             <input id="search" type="search" name="criterio">
@@ -50,7 +50,7 @@
                             <i class="material-icons">close</i>
                         </div>
 
-                    </form> -->
+                    </form>
                 </div>
             </nav>
 

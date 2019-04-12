@@ -2,6 +2,16 @@ $(function() {
     $('.parallax').parallax();
     $('.sidenav').sidenav();
     $('select').formSelect();
+    $('#modal-exclusao').modal({
+        dismissible: false,
+        startingTop: '30%',
+        endingTop: '30%'
+    });
+
+    $('#btn-cancelar').click(() => {
+        $('#modal-exclusao').modal('close');
+    });
+    // $('#modal-exclusao').modal('open');
 
 
     // if ($(document).width() <= 375) {

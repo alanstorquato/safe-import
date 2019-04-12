@@ -2,7 +2,8 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img class="imagem" src="{{ asset('images/safe.png')}}" alt="Logotipo da Safe Import"></a>
+                <a href="#" class="brand-logo"><img class="imagem" src="{{ asset('images/safe.png')}}"
+                        alt="Logotipo da Safe Import"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
                 <ul class="right hide-on-med-and-down">
@@ -13,18 +14,18 @@
                     <li><a>Notícias</a></li>
                     <li id="menu-contato"><a>Contato</a></li>
                     @if (Auth::check())
-                        <!-- <li><label>Usuário logado: {{ Auth::user()->name }}</label></li> -->
-                        <li><a href="/logout" title="Sair"><i class="material-icons sair">exit_to_app</i></a></li>
+                    <!-- <li><label>Usuário logado: {{ Auth::user()->name }}</label></li> -->
+                    <li><a href="/logout" title="Sair"><i class="material-icons sair">exit_to_app</i></a></li>
                     @endif
                 </ul>
                 <form action="/posts/search" method="POST">
                     {{ csrf_field() }}
                     <div class="input-field right">
-                        <input id="search" type="search" name="criterio" >
+                        <input id="search" type="search" name="criterio">
                         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
-                    
+
                 </form>
             </div>
         </nav>
@@ -34,7 +35,7 @@
                 <a>
                     <form action="/posts/search" method="POST">
                         {{ csrf_field() }}
-                        <input type="text" name="criterio" placeholder="Pesquisar"/>
+                        <input type="text" name="criterio" placeholder="Pesquisar" />
                     </form>
                 </a>
             </li>
@@ -54,7 +55,7 @@
             </li>
             @endif
 
-            
+
         </ul>
     </div>
 </header>

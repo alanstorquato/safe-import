@@ -29,16 +29,28 @@
         </div>
 
         <div class="col s6 m6 l3 center">
-            <form method="post" action="/posts/{{$post->id}}">
-                {{ csrf_field() }}
-
-                @method('DELETE')
-                <button type="submit" class="btn red ">DELETAR</button>
-                <!-- <button class="btn-floating waves-effect waves-light red left"><i class="material-icons">delete</i></button> -->
-
-            </form>
+            <button type="submit" class="btn red modal-trigger" data-target="modal-exclusao"> DELETAR</button>
         </div>
 
     </div>
     @endif
+</div>
+
+<div id="modal-exclusao" class="modal">
+    <div class="modal-content">
+        <h3 class="center">Confirmar a exclusão?</h3>
+    </div>
+    <div class="modal-footer">
+        <div class="container">
+            <a class="waves-effect waves-light btn-flat left" id="btn-cancelar">Cancelar</a>
+            <form method="post" action="/posts/{{$post->id}}">
+                {{ csrf_field() }}
+
+                @method('DELETE')
+                <!-- <button class="btn-floating waves-effect waves-light red left"><i class="material-icons">delete</i></button> -->
+                <button class="waves-effect waves-light btn green">Confirmar</button>
+
+            </form>
+        </div>
+    </div>
 </div>
