@@ -32,6 +32,10 @@ nav {
     color: gray;
 }
 
+.subtitulo {
+    text-overflow: ellipsis;
+}
+
 #menu-mobile-sair {
     background-color: lightgray;
 }
@@ -46,6 +50,10 @@ nav {
 
 .card.horizontal .card-image {
     max-width: 100%;
+}
+
+.card.horizontal .card-image img {
+    width: 100%;
 }
 
 .parallax-container {
@@ -134,9 +142,13 @@ nav {
     .card.horizontal .card-image {
         max-width: 50%;
     }
-    .card.horizontal .card-image img {
+    /* .card.horizontal .card-image img {
         height: 207px;
         width: 369px;
+    } */
+    .card.horizontal .card-image img {
+        width: 100%;
+        height: 100%;
     }
 }
 
