@@ -95,6 +95,9 @@
                     </div>
                 </div>
                 <div class="row">
+                    <h6 class="right">{{ $post->user->name }}, {{ $post->created_at->toFormattedDateString() }}</h6>
+                </div>
+                <div class="row">
                     <a href="/" class="waves-effect waves-light btn-large green btn-custom">Voltar</a>
                 </div>
                 
