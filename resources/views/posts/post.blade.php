@@ -11,7 +11,7 @@
 
                 <p class="subtitulo">{{ $post->subtitle }}</p>
                 <br>
-                <small class="right">{{ $post->user->name }}, {{ $post->created_at->toFormattedDateString() }}</small>
+                <small class="right autor">{{ $post->user->name }}, {{ $post->created_at->toFormattedDateString() }}</small>
 
             </div>
             <div class="card-action center">
