@@ -121,10 +121,14 @@
 
                 <br><br><br><br>
                 <div class="row center">
-                    <button class="waves-effect waves-light btn-large indigo btn-custom">Publicar</button>
+                    <div class="container">
+                        <button class="waves-effect waves-light btn-large indigo btn-custom">Publicar</button>
+                    </div>
                 </div>
                 <div class="row center">
-                    <a href="/" class="waves-effect waves-light btn-large green btn-custom">Voltar</a>
+                    <div class="container">
+                        <a href="/" class="waves-effect waves-light btn-large green btn-custom">Voltar</a>
+                    </div>
                 </div>
 
                 @include('layouts.errors')
