@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h6 class="right">{{ $post->user->name }}, {{ $post->created_at->toFormattedDateString() }}</h6>
+                    <h6 class="right autor">- {{ $post->user->name }}, {{ $post->created_at->toFormattedDateString() }}</h6>
                 </div>
                 <br>
                 <div class="row">

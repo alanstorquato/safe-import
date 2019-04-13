@@ -27,6 +27,11 @@ nav {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+.autor {
+    font-style: italic;
+    color: gray;
+}
+
 #menu-mobile-sair {
     background-color: lightgray;
 }
