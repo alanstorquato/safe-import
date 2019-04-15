@@ -85,7 +85,7 @@
     <div class="row">
         <div class="container">
 
-            <h2 class="center">Publicar Post</h2>
+            <h2 class="center">Publicar Notícia</h2>
 
             <form method="POST" action="/posts" enctype="multipart/form-data">
 

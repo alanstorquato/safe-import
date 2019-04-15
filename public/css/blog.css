@@ -176,7 +176,6 @@ nav {
         left: 0;
         right: 0;
         background-color: rgba(245, 250, 250, 0.8);
-        /* padding: 2em; */
     }
     .btn-facebook,
     .btn-instagram,
@@ -196,7 +195,6 @@ nav {
         transition: 1s;
         opacity: 1;
         background-image: linear-gradient(to right, #480048 40%, #C04848 100%);
-        /* background-position: right center; */
     }
     .btn-whatsapp:hover {
         transition: 1s;
@@ -212,21 +210,4 @@ nav {
         opacity: 1;
         background-color: #f06292;
     }
-    /* .icone-rede-social{
-    vertical-align: middle;
-  }
-
-  .rede-social{
-    color: gray;
-  }
-
-  .rede-social-facebook:hover{
-    transition: 1s;
-    color: #0d47a1;
-  }
-
-  .rede-social-instagram:hover{
-    transition: 1s;
-    color: #9c27b0;
-  } */
 }
