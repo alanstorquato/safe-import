@@ -84,6 +84,11 @@ nav {
     width: 100%;
 }
 
+.texto-noticia {
+    font-size: 18px;
+    color: #212121
+}
+
 .texto-noticia p:first-letter {
     font-size: 200%;
     margin-left: 10px;
@@ -211,3 +216,5 @@ nav {
         background-color: #f06292;
     }
 }
+
+;
