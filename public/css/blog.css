@@ -248,7 +248,7 @@ nav {
         z-index: 997;
     }
     .card.horizontal .card-image img {
-        width: 342px;
-        height: 203px;
+        width: 350px;
+        height: 100%;
     }
 }
