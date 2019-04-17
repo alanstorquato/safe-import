@@ -1,3 +1,4 @@
+
 <div class="col s12 m12 l12">
     <div class="card horizontal">
         <div class="card-image">
@@ -11,7 +12,8 @@
 
                 <p class="subtitulo">{{ $post->subtitle }}</p>
                 <br>
-                <small class="right autor">{{ $post->user->name }}, {{ $post->created_at->toFormattedDateString() }}</small>
+                <small class="right autor">{{ $post->user->name }},
+                    {{ $post->created_at->toFormattedDateString() }}</small>
 
             </div>
             <div class="card-action center">
@@ -48,7 +50,6 @@
                 {{ csrf_field() }}
 
                 @method('DELETE')
-                <!-- <button class="btn-floating waves-effect waves-light red left"><i class="material-icons">delete</i></button> -->
                 <button class="waves-effect waves-light btn green">Confirmar</button>
 
             </form>

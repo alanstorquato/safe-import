@@ -84,21 +84,22 @@
 
     <div class="row">
         <div class="container">
+            @include('layouts.errors')
 
             <h2 class="center">Publicar Notícia</h2>
-
             <form method="POST" action="/posts" enctype="multipart/form-data">
 
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="Título" type="text" class="validate" id="title" name="title">
+                        <input placeholder="Título" type="text" class="validate" id="title" name="title" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="Subtítulo" type="text" class="validate" id="subtitle" name="subtitle">
+                        <input placeholder="Subtítulo" type="text" class="validate" id="subtitle" name="subtitle"
+                            required>
                     </div>
                 </div>
 
@@ -131,10 +132,7 @@
                     </div>
                 </div>
 
-                @include('layouts.errors')
-
             </form>
-
         </div>
     </div>
 

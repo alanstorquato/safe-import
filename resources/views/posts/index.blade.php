@@ -4,8 +4,11 @@
 @section('content')
 
 <div class="col s12 m12">
-
     @if (Auth::check())
+
+    <div class="card-panel card-panel-mensagem blue scale-transition scale-out">
+        <h5 class="center">Notícia inserida com sucesso.</h5>
+    </div>
 
     <!-- <div class="row"> -->
     <form method="get" action="/posts/create">

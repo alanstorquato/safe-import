@@ -14,6 +14,11 @@ $(function() {
 
     scrollsSuaves();
 
+    setTimeout(() => {
+        $('.scale-transition').toggleClass('hidden');
+        $('.scale-transition').toggleClass('scale-out');
+    }, 2000);
+
     // $('#modal-exclusao').modal('open');
 
 
