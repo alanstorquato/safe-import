@@ -8,27 +8,26 @@ $(function() {
         endingTop: '30%'
     });
 
+
     $('#btn-cancelar').click(() => {
         $('#modal-exclusao').modal('close');
     });
 
     scrollsSuaves();
 
+    //Exibição de mensagem de erro (inclusão de notícia)
     setTimeout(() => {
-        $('.scale-transition').toggleClass('hidden');
-        $('.scale-transition').toggleClass('scale-out');
+        $('.fixed-card-mensagem').toggleClass('scale-out');
     }, 2000);
 
-    // $('#modal-exclusao').modal('open');
+    //Exibição de mensagem de sucesso (inclusão de notícia)
+    // $('.scale-transition').toggleClass('scale-out');
+    // setTimeout(() => {
+    //     $('.scale-transition').toggleClass('scale-out');
+    // }, 2000)
 
 
-    // if ($(document).width() <= 375) {
-    //     $('.card').removeClass('horizontal');
-    // } else if ($(document).width() <= 759) {
-    //     $('.card').addClass('horizontal');
-    // } else if ($(document).width() == 1024 || $(document).width() >= 1024) {
-    //     $('.card').addClass('horizontal');
-    // }
+
 });
 
 function scrollsSuaves() {

@@ -84,10 +84,11 @@
 
     <div class="row">
         <div class="container">
+                
             @include('layouts.errors')
 
             <h2 class="center">Publicar Notícia</h2>
-            <form method="POST" action="/posts" enctype="multipart/form-data">
+            <form method="POST" action="/posts" id="formInserirPost" enctype="multipart/form-data">
 
                 {{ csrf_field() }}
                 <div class="row">

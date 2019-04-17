@@ -27,7 +27,6 @@
             <form method="get" action="/posts/edit/{{$post->id}}" style="padding-bottom: 5px;">
                 {{ csrf_field() }}
                 <button type="submit" class="btn blue ">EDITAR</button>
-                <!-- <button class="btn-floating waves-effect waves-light blue right"><i class="material-icons">edit</i></button> -->
             </form>
         </div>
 

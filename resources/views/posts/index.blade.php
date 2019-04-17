@@ -5,12 +5,9 @@
 
 <div class="col s12 m12">
     @if (Auth::check())
-
-    <div class="card-panel card-panel-mensagem blue scale-transition scale-out">
-        <h5 class="center">Notícia inserida com sucesso.</h5>
+    <div class="row center card-panel card-panel-mensagem green scale-transition scale-out">
+        <p>Notícia incluída com sucesso.</p>
     </div>
-
-    <!-- <div class="row"> -->
     <form method="get" action="/posts/create">
 
         <div class="fixed-action-btn">
@@ -19,7 +16,6 @@
             </button>
         </div>
     </form>
-    <!-- </div> -->
 
     @endif
 
@@ -31,16 +27,6 @@
 
 
 </div>
-
-<!-- <ul class="pagination center">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-</ul> -->
 <div class="center">
     {{ $posts->links('vendor.pagination.default') }}.
 </div>
