@@ -74,8 +74,12 @@ class Post extends Model
                     ->back()
                     ->with('error', 'Falha ao fazer upload')
                     ->withInput();
+
+            return $image;
+        }else{
+            return null;
         }
-        return $image;
+
     }
 
 }
