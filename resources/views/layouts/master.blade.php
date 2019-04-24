@@ -26,7 +26,11 @@
 @include('layouts.nav')
 
 @if($flash = session('message'))
+    <div>
 
+        {{$flash}}
+
+    </div>
     <div id="flash-message" class="alert alert-success" role="alert">
 
         {{$flash}}
