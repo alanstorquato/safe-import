@@ -1,4 +1,3 @@
-
 <div class="col s12 m12 l12">
     <div class="card horizontal">
         <div class="card-image">
@@ -22,19 +21,19 @@
         </div>
     </div>
     @if (Auth::check())
-    <div class="row">
-        <div class="col s6 m6 l3 center">
-            <form method="get" action="/posts/edit/{{$post->id}}" style="padding-bottom: 5px;">
-                {{ csrf_field() }}
-                <button type="submit" class="btn blue ">EDITAR</button>
-            </form>
-        </div>
+        <div class="row">
+            <div class="col s6 m6 l3 center">
+                <form method="get" action="/posts/edit/{{$post->id}}" style="padding-bottom: 5px;">
+                    {{ csrf_field() }}
+                    <button type="submit" class="btn blue ">EDITAR</button>
+                </form>
+            </div>
 
-        <div class="col s6 m6 l3 center">
-            <button type="submit" class="btn red modal-trigger" data-target="modal-exclusao"> DELETAR</button>
-        </div>
+            <div class="col s6 m6 l3 center">
+                <button type="submit" class="btn red modal-trigger" data-target="modal-exclusao"> DELETAR</button>
+            </div>
 
-    </div>
+        </div>
     @endif
 </div>
 

@@ -35,17 +35,12 @@
 
 @endif
 
-
-
-@include('layouts.parallax')
-
 <main>
     <div class="container">
         <div class="row">
 
             @yield('content')
 
-            @include('layouts.sidebar')
 
         </div>
     </div>
