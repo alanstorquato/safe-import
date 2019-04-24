@@ -19,6 +19,7 @@ class PostsController extends Controller
 
     public function index()
     {
+
         $posts = Post::latest()
             ->filter(request(['month', 'year']))->paginate(5);
 
@@ -66,6 +67,7 @@ class PostsController extends Controller
         $post->image = $image;
         $post->save();
 
+        session()->flash('message', 'Post criado com sucesso');
 
         return redirect('/');
     }
@@ -102,7 +104,9 @@ class PostsController extends Controller
 
         }
 
-        return redirect('/')->with('success', 'Post atualizado com sucesso');
+        session()->flash('message', 'Post editado com sucesso');
+
+        return redirect('/')->with('update', 'Post atualizado com sucesso');
     }
 
 
@@ -110,7 +114,10 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->delete();
-        return redirect('/')->with('alert-success', 'O Post foi deletado');
+
+        session()->flash('message', 'Post deletado com sucesso');
+
+        return redirect('/')->with('deleted', 'O Post foi deletado');
     }
 
 
