@@ -87,8 +87,8 @@
 
             <h2 class="center">Publicar Notícia</h2>
 
-            <form method="POST" action="/posts" enctype="multipart/form-data">
-
+            <form method="POST" action="/posts/edit/{{$post->id}}" enctype="multipart/form-data">
+                @method('PATCH')
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="input-field col s12">
