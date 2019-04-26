@@ -17,8 +17,8 @@ $(function() {
 
     //Exibição de mensagem de erro (inclusão de notícia)
     setTimeout(() => {
-        $('.fixed-card-mensagem').toggleClass('scale-out');
-    }, 2000);
+        $('.scale-transition').toggleClass('hide');
+    }, 3000);
 
     //Exibição de mensagem de sucesso (inclusão de notícia)
     // $('.scale-transition').toggleClass('scale-out');
