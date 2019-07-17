@@ -6,7 +6,7 @@
     @include('layouts.errors')
 
     <h2 class="center">Publicar Notícia</h2>
-    <form method="POST" action="/posts" id="formInserirPost" enctype="multipart/form-data">
+    <form method="POST" action="/blog/posts" id="formInserirPost" enctype="multipart/form-data">
 
         {{ csrf_field() }}
         <div class="row">
@@ -39,7 +39,6 @@
             </div>
         </div>
 
-        <br><br><br><br>
         <div class="row center">
             <div class="container">
                 <button class="waves-effect waves-light btn-large indigo btn-custom">Publicar</button>
@@ -47,7 +46,7 @@
         </div>
         <div class="row center">
             <div class="container">
-                <a href="/" class="waves-effect waves-light btn-large green btn-custom">Voltar</a>
+                <a href="/blog" class="waves-effect waves-light btn-large green btn-custom">Voltar</a>
             </div>
         </div>
 

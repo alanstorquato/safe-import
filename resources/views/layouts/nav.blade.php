@@ -6,18 +6,18 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
                 <ul class="right hide-on-med-and-down">
-                    <li id="menu-home"><a>Home</a></li>
-                    <li id="menu-sobre"><a>Sobre nós</a></li>
-                    <li id="menu-como-funciona"><a>Como funciona</a></li>
-                    <li id="menu-duvidas"><a>Dúvidas frequentes</a></li>
-                    <li><a>Notícias</a></li>
-                    <li id="menu-contato"><a>Contato</a></li>
+                    <li id="menu-home"><a href="https://safeimport.com.br/#">Início</a></li>
+                    <li id="menu-sobre"><a href="https://safeimport.com.br/#sobre">Sobre nós</a></li>
+                    <li id="menu-como-funciona"><a href="https://safeimport.com.br/#como-funciona">Como funciona</a></li>
+                    <li id="menu-duvidas"><a href="https://safeimport.com.br/#duvidas-frequentes">Dúvidas frequentes</a></li>
+                    <li id="menu-noticias"><a>Notícias</a></li>
+                    <li id="menu-contato"><a href="https://safeimport.com.br/#contato">Contato</a></li>
                     @if (Auth::check())
                         <!-- <li><label>Usuário logado: {{ Auth::user()->name }}</label></li> -->
-                        <li><a href="/logout" title="Sair"><i class="material-icons sair">exit_to_app</i></a></li>
+                        <li><a href="/blog/logout" title="Sair"><i class="material-icons sair">exit_to_app</i></a></li>
                     @endif
                 </ul>
-                <form action="/posts/search" method="POST">
+                <form action="/blog/posts/search" method="POST">
                     {{ csrf_field() }}
                     <div class="input-field right">
                         <input id="search" type="search" name="criterio" >
@@ -32,21 +32,21 @@
         <ul class="sidenav" id="mobile-demo">
             <li>
                 <a>
-                    <form action="/posts/search" method="POST">
+                    <form action="/blog/posts/search" method="POST">
                         {{ csrf_field() }}
                         <input type="text" name="criterio" placeholder="Pesquisar"/>
                     </form>
                 </a>
             </li>
-            <li id="menu-mobile-home"><a>Home</a></li>
-            <li id="menu-mobile-sobre"><a>Sobre nós</a></li>
-            <li id="menu-mobile-como-funciona"><a>Como funciona</a></li>
-            <li id="menu-mobile-duvidas"><a>Dúvidas frequentes</a></li>
-            <li><a>Notícias</a></li>
-            <li id="menu-mobile-contato"><a>Contato</a></li>
+            <li id="menu-mobile-home"><a href="https://safeimport.com.br/#">Início</a></li>
+            <li id="menu-mobile-sobre"><a href="https://safeimport.com.br/#sobre">Sobre nós</a></li>
+            <li id="menu-mobile-como-funciona"><a href="https://safeimport.com.br/#como-funciona">Como funciona</a></li>
+            <li id="menu-mobile-duvidas"><a href="https://safeimport.com.br/#duvidas-frequentes">Dúvidas frequentes</a></li>
+            <li id="menu-mobile-noticias"><a>Notícias</a></li>
+            <li id="menu-mobile-contato"><a href="https://safeimport.com.br/#contato">Contato</a></li>
             @if (Auth::check())
             <li id="menu-mobile-sair">
-                <a href="/logout" title="Sair"><i class="material-icons sair">exit_to_app</i>Sair</a>
+                <a href="/blog/logout" title="Sair"><i class="material-icons sair">exit_to_app</i>Sair</a>
             </li>
             @endif
 

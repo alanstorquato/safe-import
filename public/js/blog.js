@@ -8,6 +8,11 @@ $(function() {
         endingTop: '30%'
     });
 
+    $('.fixed-action-btn').floatingActionButton();
+    $('.fixed-action-btn').floatingActionButton({
+        toolbarEnabled: true
+    });
+
 
     $('#btn-cancelar').click(() => {
         $('#modal-exclusao').modal('close');
@@ -43,146 +48,33 @@ function scrollsSuaves() {
         }, 2000);
     });
 
-    $("#menu-mobile-home").click(function() {
+    $("#menu-mobile-noticias").click(function() {
         $("body").stop().animate({
-            scrollTop: "0px"
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-mobile-home").click(function() {
-        $("html").stop().animate({
-            scrollTop: "0px"
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-home").click(function() {
-        $("body").stop().animate({
-            scrollTop: "0px"
-        }, 1500);
-    });
-
-    $("#menu-home").click(function() {
-        $("html").stop().animate({
-            scrollTop: "0px"
-        }, 1500);
-    });
-
-    $("#menu-mobile-sobre").click(function() {
-        $("body").stop().animate({
-            scrollTop: $("#sobre").offset().top
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-mobile-sobre").click(function() {
-        $("html").stop().animate({
-            scrollTop: $("#sobre").offset().top
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-sobre").click(function() {
-        $("body").stop().animate({
-            scrollTop: $("#sobre").offset().top
-        }, 1500);
-    });
-
-    $("#menu-sobre").click(function() {
-        $("html").stop().animate({
-            scrollTop: $("#sobre").offset().top
-        }, 1500);
-    });
-
-    $("#menu-mobile-como-funciona").click(function() {
-        $("body").stop().animate({
-            scrollTop: $("#como-funciona").offset().top
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-mobile-como-funciona").click(function() {
-        $("html").stop().animate({
-            scrollTop: $("#como-funciona").offset().top
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-como-funciona").click(function() {
-        $("body").stop().animate({
-            scrollTop: $("#como-funciona").offset().top
-        }, 1500);
-    });
-
-    $("#menu-como-funciona").click(function() {
-        $("html").stop().animate({
-            scrollTop: $("#como-funciona").offset().top
-        }, 1500);
-    });
-
-    $("#menu-mobile-duvidas").click(function() {
-        $("body").stop().animate({
-            scrollTop: $("#duvidas-frequentes").offset().top
+            scrollTop: '0px'
         }, 1500, function() {
             $(".sidenav").sidenav("close");
         });
 
     });
 
-    $("#menu-mobile-duvidas").click(function() {
+    $("#menu-mobile-noticias").click(function() {
         $("html").stop().animate({
-            scrollTop: $("#duvidas-frequentes").offset().top
+            scrollTop: '0px'
         }, 1500, function() {
             $(".sidenav").sidenav("close");
         });
 
     });
 
-    $("#menu-duvidas").click(function() {
+    $("#menu-noticias").click(function() {
         $("body").stop().animate({
-            scrollTop: $("#duvidas-frequentes").offset().top
+            scrollTop: '0px'
         }, 1500);
     });
 
-    $("#menu-duvidas").click(function() {
+    $("#menu-noticias").click(function() {
         $("html").stop().animate({
-            scrollTop: $("#duvidas-frequentes").offset().top
+            scrollTop: '0px'
         }, 1500);
     });
-
-    $("#menu-mobile-contato").click(function() {
-        $("body").stop().animate({
-            scrollTop: $("#contato").offset().top
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-mobile-contato").click(function() {
-        $("html").stop().animate({
-            scrollTop: $("#contato").offset().top
-        }, 1500, function() {
-            $(".sidenav").sidenav("close");
-        });
-    });
-
-    $("#menu-contato").click(function() {
-        $("body").stop().animate({
-            scrollTop: $("#contato").offset().top
-        }, 1500);
-    });
-
-    $("#menu-contato").click(function() {
-        $("html").stop().animate({
-            scrollTop: $("#contato").offset().top
-        }, 1500);
-    });
-
 }

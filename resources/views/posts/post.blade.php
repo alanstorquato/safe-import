@@ -16,14 +16,14 @@
 
             </div>
             <div class="card-action center">
-                <a href="/posts/{{ $post->id }}" style="color: #0C0969;">Leia mais</a>
+                <a href="/blog/posts/{{ $post->id }}" style="color: #0C0969;">Leia mais</a>
             </div>
         </div>
     </div>
     @if (Auth::check())
         <div class="row">
             <div class="col s6 m6 l3 center">
-                <form method="get" action="/posts/edit/{{$post->id}}" style="padding-bottom: 5px;">
+                <form method="get" action="/blog/posts/edit/{{$post->id}}" style="padding-bottom: 5px;">
                     {{ csrf_field() }}
                     <button type="submit" class="btn blue ">EDITAR</button>
                 </form>
@@ -39,16 +39,16 @@
 
 <div id="modal-exclusao" class="modal">
     <div class="modal-content">
-        <h3 class="center">Confirmar a exclusão?</h3>
+        <h4 class="center">Confirmar a exclusão?</h4>
     </div>
     <div class="modal-footer">
         <div class="container">
-            <a class="waves-effect waves-light btn-flat left" id="btn-cancelar">Cancelar</a>
-            <form method="post" action="/posts/{{$post->id}}">
+            <form method="post" action="/blog/posts/{{$post->id}}">
+                <a class="waves-effect waves-light btn-flat left" id="btn-cancelar">Cancelar</a>
                 {{ csrf_field() }}
 
                 @method('DELETE')
-                <button class="waves-effect waves-light btn green">Confirmar</button>
+                <button class="waves-effect waves-light btn green right">Sim</button>
 
             </form>
         </div>
