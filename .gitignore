@@ -9,3 +9,10 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+resources/views/posts/.DS_Store
+public.zip
+public/.DS_Store
+public/css/.DS_Store
+resources/.DS_Store
+resources/views/.DS_Store
+resources/views/layouts/.DS_Store
