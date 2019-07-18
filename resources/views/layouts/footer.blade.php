@@ -1,7 +1,7 @@
 @if (Auth::check())
 <footer class="page-footer">
-    <div class="footer-copyright">
-        <div class="container">
+    <div class="container">
+        <div class="row">
             <p class="center">© Safe Import - 2019</p>
         </div>
     </div>
@@ -24,8 +24,8 @@
                     <a class="btn-floating btn-large waves-effect waves-light btn-telefone"><i class="material-icons">local_phone</i></a>
                 </div>
             </div> -->
-
-            <div class="col s6 l4 m6">
+            <p class="center">© Safe Import - 2019</p>
+            <div class="col s12 m6 offset-m3">
                 <h5 class="white-text center">Arquivos</h5>
                 <select onchange="location = this.value">
                     <option value="" disabled selected>Escolha um opção</option>
@@ -40,11 +40,7 @@
                     @endif
                 </select>
             </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <p class="center">© Safe Import - 2019</p>
+            
         </div>
     </div>
 </footer>

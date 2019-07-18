@@ -20,22 +20,19 @@
 </head>
 
 <body>
-
-@include('layouts.nav')
+<header>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img class="imagem" src="{{ asset('images/safe.png')}}" alt="Logotipo da Safe Import"></a>
+            </div>
+        </nav>
+    </div>
+</header>
 
 <main>
     <div class="container">
         <div class="row">
-
-        @if($flash = session('message'))
-            <div class="container">
-                <div class="col s12 m12">
-                    <div class="row center card-panel card-panel-mensagem blue scale-transition">
-                        <p>{{$flash}}</p>
-                    </div>
-                </div>
-            </div>
-        @endif
 
             @yield('content')
 
@@ -44,7 +41,24 @@
     </div>
 </main>
 
-@include('layouts.footer')
+@if (Auth::check())
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            <p class="center">© Safe Import - 2019</p>
+        </div>
+    </div>
+</footer>
+@else
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <p class="center">© Safe Import - 2019</p>            
+        </div>
+    </div>
+</footer>
+@endif
+
 <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

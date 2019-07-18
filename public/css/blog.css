@@ -5,14 +5,15 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+    position: relative;
     margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    background-color: #fafafa
 }
 
-footer {
-    margin-top: auto;
+main {
+    margin-top: 20px;
 }
 
 nav {
@@ -67,10 +68,6 @@ nav {
     margin-bottom: 30px;
 }
 
-.page-footer {
-    background-color: rgba(32, 48, 100, 0.8);
-}
-
 .btn-facebook {
     background-color: #0d47a1;
 }
@@ -123,6 +120,15 @@ nav {
     vertical-align: middle;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .page-footer {
     background-color: rgba(32, 48, 100, 0.8);
 }
@@ -141,9 +147,6 @@ nav {
 @media(min-width: 759px) {
     .card-image {
         display: block;
-    }
-    .card-panel {
-        height: 470px;
     }
     #search {
         display: block;

@@ -49,18 +49,7 @@
                 <a href="/blog/logout" title="Sair"><i class="material-icons sair">exit_to_app</i>Sair</a>
             </li>
             @endif
-
-            
         </ul>
     </div>
 
-    @if($flash = session('message'))
-    <div class="container">
-        <div class="col s12 m12">
-            <div class="row center card-panel card-panel-mensagem blue scale-transition">
-                <p>{{$flash}}</p>
-            </div>
-        </div>
-    </div>
-    @endif
 </header>
