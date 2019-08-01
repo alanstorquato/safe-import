@@ -9,7 +9,7 @@
                     {{ $post->title }}
                 </span>
 
-                <p class="subtitulo">{{ $post->subtitle }}</p>
+                <p class="card-subtitulo">{{ $post->subtitle }}</p>
                 <br>
                 <small class="right autor">{{ $post->user->name }},
                     {{ $post->created_at->toFormattedDateString() }}</small>

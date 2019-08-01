@@ -48,7 +48,7 @@
         </div>
         <div class="row center">
             <div class="container">
-                <a href="/blog" class="waves-effect waves-light btn-large green btn-custom">Voltar</a>
+                <a href="/blog" class="waves-effect waves-light btn-large pink lighten-2 btn-custom">Voltar</a>
             </div>
         </div>
 
