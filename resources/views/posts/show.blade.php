@@ -4,8 +4,8 @@
 @section('content')
 
 <div class="row">
-    <h2 class="center titulo">{{ $post->title }}</h2>
-    <h5 class="center subtitulo">{{ $post->subtitle}}</h5>
+    <h4 class="center">{{ $post->title }}</h4>
+    <p class="center subtitulo">{{ $post->subtitle}}</p>
     <img class="center img-noticia" src="{{ asset($post->image) }}" alt="Imagem do post">
 </div>
 <div class="row">
